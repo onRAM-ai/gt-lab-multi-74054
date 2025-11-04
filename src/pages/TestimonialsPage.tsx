@@ -12,39 +12,27 @@ const TestimonialsPage: React.FC = () => {
       subtitle: 'Trusted by mining companies across the Goldfields for reliable concrete testing services',
       testimonials: [
         {
-          name: 'Sarah Mitchell',
-          company: 'Operations Manager, Goldfields Mining Co.',
-        text: 'Goldfields Testing Laboratory\'s operational mining experience really shows in their testing approach. They understand our time constraints and provide results that help us make informed decisions quickly. Their Australian Standards compliance gives us confidence in every report.',
+          name: 'Jen',
+          company: 'Geotechnical Engineer, Kambalda',
+          text: 'Goldfields Testing Laboratory has been our testing laboratory for over three years. Their consistency, reliability, and understanding of mining requirements make them a valuable partner',
           rating: 5
         },
         {
-          name: 'Mike Thompson',
-          company: 'Project Engineer, Kalgoorlie Construction',
-        text: 'The difference between Goldfields Testing Laboratory and other testing facilities is clear - they know mining operations. Their sample handling is professional, reporting is detailed, and turnaround times consistently meet our project deadlines.',
+          name: 'Matt',
+          company: 'Project Manager, Kalgoorlie',
+          text: 'We have recently started using Goldfields Testing Laboratory for all our QAQC testing. We have been impressed with their communications and feedback on the results.',
           rating: 5
         },
         {
-          name: 'Rachel Davis',
-          company: 'Quality Manager, Regional Contractors',
-        text: 'We\'ve used several testing labs over the years, but Goldfields Testing Laboratory stands out for their competitive pricing and superior service quality. Their local presence in Kalgoorlie means faster service and better understanding of our needs.',
+          name: 'Farhan',
+          company: 'Geotechnical Superintendent, Kalgoorlie',
+          text: 'We have been using Goldfields Testing Laboratory for many years for our cable bolt grout UCS testing. Being local makes getting samples to the lab straightforward. They provide regular feedback on sample quality and promptly answer any questions we may have on the results',
           rating: 5
         },
         {
-          name: 'James Wilson',
-          company: 'Site Supervisor, Mining Solutions Ltd.',
-        text: 'Professional service from start to finish. Goldfields Testing Laboratory\'s team provides clear communication, detailed reports, and their operational experience helps us interpret results in practical terms for our concrete applications.',
-          rating: 5
-        },
-        {
-          name: 'Emma Thompson',
-          company: 'Project Manager, Goldfields Development',
-        text: 'Goldfields Testing Laboratory has been our go-to testing laboratory for over two years. Their consistency, reliability, and deep understanding of mining requirements make them an invaluable partner in our operations.',
-          rating: 5
-        },
-        {
-          name: 'David Rodriguez',
-          company: 'Quality Assurance Lead, Mining Corp Australia',
-        text: 'What sets Goldfields Testing Laboratory apart is their ability to provide not just testing results, but practical insights based on real mining experience. Their reports help us optimize our concrete mix designs for better performance.',
+          name: 'James',
+          company: 'Operations Director, Perth',
+          text: 'The difference between Goldfields Testing Laboratory and other testing facilities is clear - they know mining operations. Their sample handling is professional, reporting is detailed, and turnaround times consistently meet our project deadlines.',
           rating: 5
         }
       ],
@@ -115,39 +103,27 @@ const TestimonialsPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Mitchell',
-      company: 'Operations Manager, Goldfields Mining Co.',
-      text: 'Goldfields Testing Laboratory\'s operational mining experience really shows in their testing approach. They understand our time constraints and provide results that help us make informed decisions quickly. Their Australian Standards compliance gives us confidence in every report.',
+      name: 'Jen',
+      company: 'Geotechnical Engineer, Kambalda',
+      text: 'Goldfields Testing Laboratory has been our testing laboratory for over three years. Their consistency, reliability, and understanding of mining requirements make them a valuable partner',
       rating: 5
     },
     {
-      name: 'Mike Thompson',
-      company: 'Project Engineer, Kalgoorlie Construction',
+      name: 'Matt',
+      company: 'Project Manager, Kalgoorlie',
+      text: 'We have recently started using Goldfields Testing Laboratory for all our QAQC testing. We have been impressed with their communications and feedback on the results.',
+      rating: 5
+    },
+    {
+      name: 'Farhan',
+      company: 'Geotechnical Superintendent, Kalgoorlie',
+      text: 'We have been using Goldfields Testing Laboratory for many years for our cable bolt grout UCS testing. Being local makes getting samples to the lab straightforward. They provide regular feedback on sample quality and promptly answer any questions we may have on the results',
+      rating: 5
+    },
+    {
+      name: 'James',
+      company: 'Operations Director, Perth',
       text: 'The difference between Goldfields Testing Laboratory and other testing facilities is clear - they know mining operations. Their sample handling is professional, reporting is detailed, and turnaround times consistently meet our project deadlines.',
-      rating: 5
-    },
-    {
-      name: 'Rachel Davis',
-      company: 'Quality Manager, Regional Contractors',
-      text: 'We\'ve used several testing labs over the years, but Goldfields Testing Laboratory stands out for their competitive pricing and superior service quality. Their local presence in Kalgoorlie means faster service and better understanding of our needs.',
-      rating: 5
-    },
-    {
-      name: 'James Wilson',
-      company: 'Site Supervisor, Mining Solutions Ltd.',
-      text: 'Professional service from start to finish. Goldfields Testing Laboratory\'s team provides clear communication, detailed reports, and their operational experience helps us interpret results in practical terms for our concrete applications.',
-      rating: 5
-    },
-    {
-      name: 'Emma Thompson',
-      company: 'Project Manager, Goldfields Development',
-      text: 'Goldfields Testing Laboratory has been our go-to testing laboratory for over two years. Their consistency, reliability, and deep understanding of mining requirements make them an invaluable partner in our operations.',
-      rating: 5
-    },
-    {
-      name: 'David Rodriguez',
-      company: 'Quality Assurance Lead, Mining Corp Australia',
-      text: 'What sets Goldfields Testing Laboratory apart is their ability to provide not just testing results, but practical insights based on real mining experience. Their reports help us optimize our concrete mix designs for better performance.',
       rating: 5
     }
   ];

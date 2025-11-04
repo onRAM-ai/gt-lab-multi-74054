@@ -7,21 +7,21 @@ const TestimonialCarousel: React.FC = () => {
 
   const testimonials = [
     {
-      text: "Goldfields Testing Laboratory's UCS testing results have been consistently reliable and delivered on time. Their expertise has helped us make critical decisions for our mining operations.",
-      name: "James Morrison",
-      company: "Goldfields Mining Corp",
+      text: "Goldfields Testing Laboratory has been our testing laboratory for over three years. Their consistency, reliability, and understanding of mining requirements make them a valuable partner",
+      name: "Jen",
+      company: "Geotechnical Engineer, Kambalda",
       rating: 5
     },
     {
-      text: "Professional service with detailed reporting. The team understands the mining industry requirements and delivers accordingly.",
-      name: "Sarah Chen",
-      company: "Northern Minerals Ltd",
+      text: "We have recently started using Goldfields Testing Laboratory for all our QAQC testing. We have been impressed with their communications and feedback on the results.",
+      name: "Matt",
+      company: "Project Manager, Kalgoorlie",
       rating: 5
     },
     {
-      text: "Fast turnaround times without compromising on quality. Goldfields Testing Laboratory has become our go-to testing partner.",
-      name: "Michael Brown",
-      company: "Kalgoorlie Resources",
+      text: "We have been using Goldfields Testing Laboratory for many years for our cable bolt grout UCS testing. Being local makes getting samples to the lab straightforward. They provide regular feedback on sample quality and promptly answer any questions we may have on the results",
+      name: "Farhan",
+      company: "Geotechnical Superintendent, Kalgoorlie",
       rating: 5
     }
   ];
