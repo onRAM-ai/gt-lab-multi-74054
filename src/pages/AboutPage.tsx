@@ -6,9 +6,7 @@ import gtLabLogo from '../assets/gt-lab-logo.jpg';
 import labInterior from '../assets/lab-interior.jpg';
 import labTesting from '../assets/lab-testing.jpg';
 import labEquipment from '../assets/lab-equipment.jpg';
-
 const AboutPage: React.FC = () => {
-
   const content = {
     en: {
       title: 'About Goldfields Testing Laboratory',
@@ -16,14 +14,25 @@ const AboutPage: React.FC = () => {
       description: "Goldfields Testing Laboratory are a Kalgoorlie based laboratory specialising in mining ground support quality control testing. We provide high quality testing of shotcrete and cable bolt grout materials.\n\nOur well-trained staff ensure that your test results are accurate, reliable and on time. We pride ourselves on our ability to provide you with a personal yet professional service.",
       mission: 'Mission',
       missionText: 'To provide accurate and reliable ground support quality control testing services that mining companies can trust. We combine laboratory excellence with personal service to deliver results that meet your ground support QAQC requirements.',
-      vision: 'Vision', 
+      vision: 'Vision',
       visionText: 'To be the Goldfields\' premier testing laboratory for mining ground support materials, known for our high quality testing, well-trained staff, and commitment to personal yet professional service.',
-      stats: [
-        { icon: Users, number: '30+', label: 'Mining Clients' },
-        { icon: Award, number: '5000+', label: 'Samples Tested' },
-        { icon: Target, number: '100%', label: 'Standards Compliant' },
-        { icon: MapPin, number: 'Kalgoorlie Local', label: 'Fast & Reliable Testing' }
-      ],
+      stats: [{
+        icon: Users,
+        number: '30+',
+        label: 'Mining Clients'
+      }, {
+        icon: Award,
+        number: '5000+',
+        label: 'Samples Tested'
+      }, {
+        icon: Target,
+        number: '100%',
+        label: 'Standards Compliant'
+      }, {
+        icon: MapPin,
+        number: 'Kalgoorlie Local',
+        label: 'Fast & Reliable Testing'
+      }],
       pageTitle: 'About Us - Goldfields Testing Laboratory',
       pageDescription: 'Learn about Goldfields Testing Laboratory, Kalgoorlie\'s specialist in mining ground support quality control testing. High quality shotcrete and grout testing with personal, professional service.'
     },
@@ -35,12 +44,23 @@ const AboutPage: React.FC = () => {
       missionText: 'Proporcionar servicios de pruebas de control de calidad de soporte de terreno precisos y confiables en los que las empresas mineras puedan confiar. Combinamos excelencia de laboratorio con servicio personal para entregar resultados que cumplan sus requisitos de QAQC de soporte de terreno.',
       vision: 'Visión',
       visionText: 'Ser el laboratorio de pruebas premier de Goldfields para materiales de soporte de terreno minero, conocido por nuestras pruebas de alta calidad, personal bien capacitado y compromiso con un servicio personal pero profesional.',
-      stats: [
-        { icon: Users, number: '30+', label: 'Clientes Mineros' },
-        { icon: Award, number: '5000+', label: 'Muestras Probadas' },
-        { icon: Target, number: '100%', label: 'Cumplimiento de Estándares' },
-        { icon: MapPin, number: 'Kalgoorlie Local', label: 'Pruebas Rápidas y Confiables' }
-      ],
+      stats: [{
+        icon: Users,
+        number: '30+',
+        label: 'Clientes Mineros'
+      }, {
+        icon: Award,
+        number: '5000+',
+        label: 'Muestras Probadas'
+      }, {
+        icon: Target,
+        number: '100%',
+        label: 'Cumplimiento de Estándares'
+      }, {
+        icon: MapPin,
+        number: 'Kalgoorlie Local',
+        label: 'Pruebas Rápidas y Confiables'
+      }],
       pageTitle: 'Acerca de Nosotros - Goldfields Testing Laboratory',
       pageDescription: 'Conoce sobre Goldfields Testing Laboratory, especialista de Kalgoorlie en pruebas de control de calidad de soporte de terreno minero. Pruebas de alta calidad de shotcrete y lechada con servicio personal y profesional.'
     }
@@ -59,16 +79,24 @@ const AboutPage: React.FC = () => {
       document.head.appendChild(meta);
     }
   }, []);
-
-  const stats = [
-    { icon: Users, number: '30+', label: 'Mining Clients' },
-    { icon: Award, number: '5000+', label: 'Samples Tested' },
-    { icon: Target, number: '100%', label: 'Standards Compliant' },
-    { icon: MapPin, number: 'Kalgoorlie Local', label: 'Fast & Reliable Testing' }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const stats = [{
+    icon: Users,
+    number: '30+',
+    label: 'Mining Clients'
+  }, {
+    icon: Award,
+    number: '5000+',
+    label: 'Samples Tested'
+  }, {
+    icon: Target,
+    number: '100%',
+    label: 'Standards Compliant'
+  }, {
+    icon: MapPin,
+    number: 'Kalgoorlie Local',
+    label: 'Fast & Reliable Testing'
+  }];
+  return <div className="min-h-screen">
       <Header />
       
       <main>
@@ -91,9 +119,7 @@ const AboutPage: React.FC = () => {
                       <span className="text-gray-900">Laboratory</span>
                     </span>
                   </h1>
-                  <h2 className="text-2xl text-gray-700 font-light italic">
-                    Your Trusted Partner in Mining Ground Support Quality Control
-                  </h2>
+                  <h2 className="text-2xl text-gray-700 font-light italic">Your trusted partner for concrete, shotcrete, grout &amp; backfill QAQC.</h2>
                   <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">
                     Goldfields Testing Laboratory are a Kalgoorlie based laboratory specialising in mining ground support quality control testing. We provide high quality testing of shotcrete and cable bolt grout materials.
 
@@ -128,30 +154,18 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
               <div className="space-y-12">
                 {/* Main Featured Image */}
                 <div className="relative animate-fade-in delay-500 overflow-hidden rounded-3xl shadow-2xl group">
-                  <img 
-                    src={labInterior}
-                    alt="Professional concrete testing laboratory interior"
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <img src={labInterior} alt="Professional concrete testing laboratory interior" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
                 </div>
 
                 {/* Image Grid */}
                 <div className="grid grid-cols-2 gap-6 animate-fade-in delay-700">
                   <div className="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img 
-                      src={labTesting}
-                      alt="Laboratory technician testing concrete cylinders"
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                    <img src={labTesting} alt="Laboratory technician testing concrete cylinders" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent"></div>
                   </div>
                   <div className="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img 
-                      src={labEquipment}
-                      alt="Concrete test cylinders and quality control equipment"
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                    <img src={labEquipment} alt="Concrete test cylinders and quality control equipment" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent"></div>
                   </div>
                 </div>
@@ -159,13 +173,10 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
                 {/* Enhanced Stats Grid */}
                 <div className="grid grid-cols-2 gap-6 animate-fade-in delay-900">
                   {stats.map((stat, index) => {
-                    const IconComponent = stat.icon;
-                    return (
-                      <div
-                        key={index}
-                        className="group bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2"
-                        style={{ animationDelay: `${800 + index * 100}ms` }}
-                      >
+                  const IconComponent = stat.icon;
+                  return <div key={index} className="group bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2" style={{
+                    animationDelay: `${800 + index * 100}ms`
+                  }}>
                         <div className="flex justify-center mb-4">
                           <div className="w-14 h-14 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                             <IconComponent className="w-7 h-7 text-white" />
@@ -177,9 +188,8 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
                         <div className="text-gray-700 font-medium text-sm">
                           {stat.label}
                         </div>
-                      </div>
-                    );
-                  })}
+                      </div>;
+                })}
             </div>
           </div>
         </div>
@@ -241,29 +251,23 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent"></div>
             
             <div className="space-y-12">
-              {[
-                {
+              {[{
                   step: 1,
                   title: 'Sample Collection & Delivery',
                   description: 'Secure sample delivery with proper chain of custody documentation and labeling according to Australian Standards.'
-                },
-                {
+                }, {
                   step: 2,
                   title: 'Laboratory Registration',
                   description: 'Professional cataloguing and storage in our controlled environment with full traceability systems.'
-                },
-                {
+                }, {
                   step: 3,
                   title: 'Testing Execution',
                   description: 'Precise UCS testing at required intervals using calibrated equipment and Australian Standard procedures.'
-                },
-                {
+                }, {
                   step: 4,
                   title: 'Results & Reporting',
                   description: 'Comprehensive digital reports.'
-                }
-              ].map((item, index) => (
-                <div key={index} className="relative flex items-center">
+                }].map((item, index) => <div key={index} className="relative flex items-center">
                   <div className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10`}>
                     {item.step}
                   </div>
@@ -277,8 +281,7 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
                       </p>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -287,8 +290,6 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AboutPage;
