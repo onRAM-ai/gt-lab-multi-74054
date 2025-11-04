@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import concreteSpecimens from '../assets/services/concrete-specimens.jpg';
+import shotcreteCores from '../assets/services/shotcrete-cores.jpg';
+import cementGrout from '../assets/services/cement-grout.jpg';
+import backfillTesting from '../assets/services/backfill-testing.jpg';
 
 const ServicesPreview: React.FC = () => {
   return (
@@ -19,32 +23,46 @@ const ServicesPreview: React.FC = () => {
           {[
             {
               title: 'Concrete Specimens',
-              description: 'Compressive strength of concrete cylinders or cubes'
+              description: 'Compressive strength of concrete cylinders or cubes',
+              image: concreteSpecimens
             },
             {
               title: 'Shotcrete Cores',
-              description: 'Compressive strength of shotcrete cores'
+              description: 'Compressive strength of shotcrete cores',
+              image: shotcreteCores
             },
             {
               title: 'Cement Grout',
-              description: 'Compressive strength of cement grout cylinders or cubes'
+              description: 'Compressive strength of cement grout cylinders or cubes',
+              image: cementGrout
             },
             {
               title: 'Backfill Testing',
-              description: 'Compressive strength of backfill (paste or CAF) cylinders'
+              description: 'Compressive strength of backfill (paste or CAF) cylinders',
+              image: backfillTesting
             }
           ].map((service, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {service.title}
-              </h3>
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               
-              <p className="text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
