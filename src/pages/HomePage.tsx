@@ -10,6 +10,7 @@ import ClientsSection from '../components/ClientsSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import ContactCTA from '../components/ContactCTA';
 import gtLabLogo from '../assets/GT_Lab_Logo_big.png';
+import labFacility from '../assets/lab-facility.jpg';
 const HomePage: React.FC = () => {
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
   const handleGetQuote = () => {
@@ -19,6 +20,34 @@ const HomePage: React.FC = () => {
       <Header />
       
       <main>
+        {/* Photo Header Section with "Quality Control" */}
+        <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img 
+              src={labFacility} 
+              alt="Goldfields Testing Laboratory Facility" 
+              className="w-full h-full object-cover"
+            />
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+          </div>
+
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 animate-pulse blur-xl"></div>
+            <div className="absolute bottom-20 right-20 w-40 h-40 rounded-full bg-gradient-to-r from-secondary/20 to-primary/20 animate-pulse delay-1000 blur-xl"></div>
+          </div>
+
+          {/* "Quality Control" Heading */}
+          <div className="relative z-10 text-center animate-fade-in">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-4 leading-tight drop-shadow-2xl">
+              Quality Control
+            </h1>
+          </div>
+        </section>
+
+        {/* Content Section with "For Mining Operations" and Details */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-100">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -36,18 +65,15 @@ const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32">
-            <div className="grid lg:grid-cols-2 gap-12 items-center pb-16">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content with slide-in animation */}
               <div className="text-center lg:text-left animate-fade-in">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-tight">
-                  <span className="block animate-fade-in">
-                </span>
-                  <span className="block animate-fade-in">Quality Control</span>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary animate-gradient-x">
                     For Mining Operations
                   </span>
-                </h1>
+                </h2>
 
                 <p className="text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed animate-fade-in delay-300">
                   Professional ground support QAQC testing services for mining companies. Concrete, shotcrete, grout and backfill testing to Australian Standards with personal, professional service.
