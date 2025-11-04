@@ -60,7 +60,7 @@ const ServicesPage: React.FC = () => {
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
-            <nav className="flex mb-8" aria-label="Breadcrumb">
+            <nav className="hidden flex mb-8" aria-label="Breadcrumb">
               <ol className="inline-flex items-center space-x-1 md:space-x-3">
                 <li className="inline-flex items-center">
                   <Link to="/" className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">
