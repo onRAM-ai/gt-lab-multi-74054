@@ -43,15 +43,15 @@ const ContactCTA: React.FC = () => {
               {
                 icon: Phone,
                 label: 'Call Us',
-                value: '+61 8 9021 3333',
-                action: 'tel:+61890213333',
+                value: '+61 428 466 040',
+                action: 'tel:+61428466040',
                 type: 'tel'
               },
               {
                 icon: Mail,
                 label: 'Email Us',
-                value: 'info@gtlabkalgoorlie.com',
-                action: 'mailto:info@gtlabkalgoorlie.com',
+                value: 'labmanager@gtlab.com.au',
+                action: 'mailto:labmanager@gtlab.com.au',
                 type: 'mailto'
               },
               {

@@ -35,8 +35,8 @@ const ContactPage: React.FC = () => {
       info: {
         title: 'Laboratory Information',
         address: 'Kalgoorlie, Western Australia',
-        phone: '+61 (08) XXXX-XXXX',
-        email: 'testing@gtlabkalgoorlie.com.au',
+        phone: '+61 428 466 040',
+        email: 'labmanager@gtlab.com.au',
         hours: 'Mon - Fri: 7:00 AM - 5:00 PM'
       },
       sampleDelivery: 'Sample Delivery Instructions',
@@ -63,8 +63,8 @@ const ContactPage: React.FC = () => {
       info: {
         title: 'Información del Laboratorio',
         address: 'Kalgoorlie, Australia Occidental',
-        phone: '+61 (08) XXXX-XXXX',
-        email: 'testing@gtlabkalgoorlie.com.au',
+        phone: '+61 428 466 040',
+        email: 'labmanager@gtlab.com.au',
         hours: 'Lun - Vie: 7:00 AM - 5:00 PM'
       },
       sampleDelivery: 'Instrucciones de Entrega de Muestras',
@@ -318,7 +318,7 @@ const ContactPage: React.FC = () => {
                           Phone
                         </h3>
                         <p className="text-gray-600">
-                          +61 (08) XXXX-XXXX
+                          +61 428 466 040
                         </p>
                       </div>
                     </div>
@@ -332,7 +332,7 @@ const ContactPage: React.FC = () => {
                           Email
                         </h3>
                         <p className="text-gray-600">
-                          testing@gtlabkalgoorlie.com.au
+                          labmanager@gtlab.com.au
                         </p>
                       </div>
                     </div>
