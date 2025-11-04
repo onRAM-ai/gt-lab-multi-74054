@@ -93,7 +93,7 @@ const ServicesPage: React.FC = () => {
     color: 'from-primary to-accent'
   }, {
     icon: Beaker,
-    title: 'Shotcrete Cores',
+    title: 'Shotcrete Cores (AS 1012.14)',
     description: 'Compressive strength testing of shotcrete cores to Australian Standards using calibrated equipment.',
     color: 'from-primary to-accent'
   }, {
