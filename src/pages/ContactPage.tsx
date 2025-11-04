@@ -5,7 +5,6 @@ import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -15,7 +14,6 @@ const ContactPage: React.FC = () => {
     message: '',
     testingType: ''
   });
-
   const content = {
     en: {
       title: 'Request Testing Services',
@@ -35,8 +33,8 @@ const ContactPage: React.FC = () => {
       info: {
         title: 'Laboratory Information',
         address: 'Kalgoorlie, Western Australia',
-        phone: '+61 428 466 040',
-        email: 'labmanager@gtlab.com.au',
+        phone: '+61 (08) XXXX-XXXX',
+        email: 'testing@gtlabkalgoorlie.com.au',
         hours: 'Mon - Fri: 7:00 AM - 5:00 PM'
       },
       sampleDelivery: 'Sample Delivery Instructions',
@@ -63,8 +61,8 @@ const ContactPage: React.FC = () => {
       info: {
         title: 'Información del Laboratorio',
         address: 'Kalgoorlie, Australia Occidental',
-        phone: '+61 428 466 040',
-        email: 'labmanager@gtlab.com.au',
+        phone: '+61 (08) XXXX-XXXX',
+        email: 'testing@gtlabkalgoorlie.com.au',
         hours: 'Lun - Vie: 7:00 AM - 5:00 PM'
       },
       sampleDelivery: 'Instrucciones de Entrega de Muestras',
@@ -88,45 +86,39 @@ const ContactPage: React.FC = () => {
       document.head.appendChild(meta);
     }
   }, []);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    
     if (!formData.name || !formData.email || !formData.company || !formData.message) {
       toast.error('Please fill in all required fields.');
       return;
     }
-    
     try {
-      const { data, error } = await supabase
-        .from('leads')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone || 'Not provided',
-            company: formData.company,
-            source: 'Goldfields Testing Laboratory Website - Contact Page',
-            status: 'New',
-            notes: `Testing Type: ${formData.testingType || 'Not specified'}`,
-            message: formData.message
-          }
-        ]);
-
+      const {
+        data,
+        error
+      } = await supabase.from('leads').insert([{
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || 'Not provided',
+        company: formData.company,
+        source: 'Goldfields Testing Laboratory Website - Contact Page',
+        status: 'New',
+        notes: `Testing Type: ${formData.testingType || 'Not specified'}`,
+        message: formData.message
+      }]);
       if (error) {
         console.error('Supabase error:', error);
         toast.error('Error submitting form. Please try again.');
         return;
       }
-
       console.log('Lead saved to Supabase:', data);
       toast.success('Testing request sent successfully! We\'ll contact you within 24 hours.');
-      setFormData({ 
-        name: '', 
-        email: '', 
-        phone: '', 
-        company: '', 
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
         message: '',
         testingType: ''
       });
@@ -135,16 +127,13 @@ const ContactPage: React.FC = () => {
       toast.error('Error submitting form. Please try again.');
     }
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       
       <main>
@@ -172,9 +161,7 @@ const ContactPage: React.FC = () => {
               <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
                 Request Testing Services
               </h1>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Ready to ensure your concrete meets Australian Standards? Contact Goldfields Testing Laboratory for professional UCS testing services.
-              </p>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Contact Goldfields Testing Laboratory for professional UCS testing services.</p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
@@ -186,27 +173,13 @@ const ContactPage: React.FC = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
                       </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field"
-                        required
-                      />
+                      <input type="text" name="name" value={formData.name} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field" required />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Email Address *
                       </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field"
-                        required
-                      />
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field" required />
                     </div>
                   </div>
                   
@@ -215,26 +188,13 @@ const ContactPage: React.FC = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Phone Number
                       </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field"
-                      />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Mining Company/Contractor *
                       </label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field"
-                        required
-                      />
+                      <input type="text" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors input-field" required />
                     </div>
                   </div>
 
@@ -242,12 +202,7 @@ const ContactPage: React.FC = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Type of Testing
                     </label>
-                    <select
-                      name="testingType"
-                      value={formData.testingType}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors select-field"
-                    >
+                    <select name="testingType" value={formData.testingType} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors select-field">
                       <option value="">Select testing type</option>
                       <option value="Compressive strength of grout cylinders (50mm diameter) AS1012.9 & 12.1">Compressive strength of grout cylinders (50mm diameter) AS1012.9 & 12.1</option>
                       <option value="Compressive strength of grout/concrete cylinders (100mm diameter) AS1012.9 & 12.1">Compressive strength of grout/concrete cylinders (100mm diameter) AS1012.9 & 12.1</option>
@@ -266,21 +221,10 @@ const ContactPage: React.FC = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Project Details & Requirements *
                     </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none input-field"
-                      required
-                      placeholder="Please describe your project requirements, concrete specifications, and any special testing needs..."
-                    ></textarea>
+                    <textarea name="message" value={formData.message} onChange={handleInputChange} rows={6} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none input-field" required placeholder="Please describe your project requirements, concrete specifications, and any special testing needs..."></textarea>
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-primary to-accent text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center group"
-                  >
+                  <button type="submit" className="w-full bg-gradient-to-r from-primary to-accent text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center group">
                     Send Testing Request
                     <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -318,7 +262,7 @@ const ContactPage: React.FC = () => {
                           Phone
                         </h3>
                         <p className="text-gray-600">
-                          +61 428 466 040
+                          +61 (08) XXXX-XXXX
                         </p>
                       </div>
                     </div>
@@ -332,7 +276,7 @@ const ContactPage: React.FC = () => {
                           Email
                         </h3>
                         <p className="text-gray-600">
-                          labmanager@gtlab.com.au
+                          testing@gtlabkalgoorlie.com.au
                         </p>
                       </div>
                     </div>
@@ -423,8 +367,6 @@ const ContactPage: React.FC = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ContactPage;
