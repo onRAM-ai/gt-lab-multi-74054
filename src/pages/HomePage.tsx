@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
           {/* "Quality Control" Heading */}
           <div className="relative z-10 text-center animate-fade-in">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-4 leading-tight drop-shadow-2xl">
-              Quality Control
+              UCS Testing
             </h1>
           </div>
         </section>
