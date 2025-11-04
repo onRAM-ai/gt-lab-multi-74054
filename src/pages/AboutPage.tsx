@@ -278,11 +278,6 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
                 icon: Clock,
                 title: 'Reliable Scheduling',
                 description: 'Precise testing at 7, 14, and 28-day intervals with consistent, dependable reporting that fits your project timelines.'
-              },
-              {
-                icon: Users,
-                title: 'Mining-Focused Service',
-                description: 'We specialize exclusively in serving mining companies and contractors, understanding your unique operational challenges and requirements.'
               }
             ].map((advantage, index) => {
               const IconComponent = advantage.icon;
