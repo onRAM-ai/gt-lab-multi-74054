@@ -7,7 +7,6 @@ import concreteSpecimens from '../assets/services/concrete-specimens.jpg';
 import shotcreteCores from '../assets/services/shotcrete-cores.jpg';
 import cementGrout from '../assets/services/cement-grout.jpg';
 import backfillTesting from '../assets/services/backfill-testing.jpg';
-
 const ServicesPage: React.FC = () => {
   // Set page title and meta description
   React.useEffect(() => {
@@ -95,11 +94,7 @@ const ServicesPage: React.FC = () => {
               }}>
                     {/* Image container */}
                     <div className="relative h-64 overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
+                      <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                     
@@ -120,17 +115,7 @@ const ServicesPage: React.FC = () => {
             </div>
 
             {/* Professional Process Steps */}
-            <div className="mb-16 animate-fade-in delay-300">
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Testing Process</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {processSteps.map((step, index) => <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      {index + 1}
-                    </div>
-                    <p className="text-gray-700 font-medium leading-relaxed">{step}</p>
-                  </div>)}
-              </div>
-            </div>
+            
 
             {/* Professional CTA Section */}
             <div className="text-center animate-fade-in delay-500">
