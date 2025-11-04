@@ -21,7 +21,7 @@ const WhyChooseUsPreview: React.FC = () => {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             { number: "5000+", label: "Samples Tested" },
-            { number: "30+", label: "Mining Clients" },
+            { number: "30+", label: "Mining Focused" },
             { icon: MapPin, label: "Kalgoorlie Local" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
