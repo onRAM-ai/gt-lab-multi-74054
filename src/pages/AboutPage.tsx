@@ -245,7 +245,7 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
         <div className="border-t border-gray-200 pt-20 mt-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Why Choose GT Lab?
+              Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Goldfields Testing</span> Laboratory?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               The operational advantage in concrete testing
