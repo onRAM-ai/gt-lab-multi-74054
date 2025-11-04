@@ -222,7 +222,7 @@ const Contact: React.FC = () => {
                       Location
                     </h4>
                     <p className="text-gray-600">
-                      Kalgoorlie, Western Australia
+                      32 Vivian St, South Boulder, WA
                     </p>
                   </div>
                 </div>

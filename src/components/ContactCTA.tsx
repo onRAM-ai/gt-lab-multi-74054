@@ -41,7 +41,7 @@ const ContactCTA: React.FC = () => {
           }, {
             icon: MapPin,
             label: 'Visit Us',
-            value: 'Kalgoorlie, WA',
+            value: '32 Vivian St, South Boulder, WA',
             action: '/contact',
             type: 'link'
           }].map((contact, index) => {

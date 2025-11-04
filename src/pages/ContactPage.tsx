@@ -32,7 +32,7 @@ const ContactPage: React.FC = () => {
       },
       info: {
         title: 'Laboratory Information',
-        address: 'Kalgoorlie, Western Australia',
+        address: '32 Vivian St, South Boulder, WA',
         phone: '+61 (08) XXXX-XXXX',
         email: 'testing@gtlabkalgoorlie.com.au',
         hours: 'Mon - Fri: 7:00 AM - 5:00 PM'
@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
       },
       info: {
         title: 'Información del Laboratorio',
-        address: 'Kalgoorlie, Australia Occidental',
+        address: '32 Vivian St, South Boulder, WA',
         phone: '+61 (08) XXXX-XXXX',
         email: 'testing@gtlabkalgoorlie.com.au',
         hours: 'Lun - Vie: 7:00 AM - 5:00 PM'
@@ -248,7 +248,7 @@ const ContactPage: React.FC = () => {
                           Location
                         </h3>
                         <p className="text-gray-600">
-                          Kalgoorlie, Western Australia
+                          32 Vivian St, South Boulder, WA
                         </p>
                       </div>
                     </div>
