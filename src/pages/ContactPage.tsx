@@ -33,7 +33,7 @@ const ContactPage: React.FC = () => {
       info: {
         title: 'Laboratory Information',
         address: '32 Vivian St, South Boulder, WA',
-        phone: '+61 (08) XXXX-XXXX',
+        phone: '+61 428 466 070',
         email: 'testing@gtlabkalgoorlie.com.au',
         hours: 'Mon - Fri: 7:00 AM - 5:00 PM'
       },
@@ -61,7 +61,7 @@ const ContactPage: React.FC = () => {
       info: {
         title: 'Información del Laboratorio',
         address: '32 Vivian St, South Boulder, WA',
-        phone: '+61 (08) XXXX-XXXX',
+        phone: '+61 428 466 070',
         email: 'testing@gtlabkalgoorlie.com.au',
         hours: 'Lun - Vie: 7:00 AM - 5:00 PM'
       },
@@ -262,7 +262,7 @@ const ContactPage: React.FC = () => {
                           Phone
                         </h3>
                         <p className="text-gray-600">
-                          +61 (08) XXXX-XXXX
+                          +61 428 466 070
                         </p>
                       </div>
                     </div>
