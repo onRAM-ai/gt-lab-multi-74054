@@ -88,7 +88,7 @@ const ServicesPage: React.FC = () => {
   }, []);
   const services = [{
     icon: FileText,
-    title: 'Concrete Cylinders or Cubes',
+    title: 'Concrete Cylinders or Cubes (AS 1012.9 & 1012.12.1)',
     description: 'Compressive strength testing of concrete cylinders or cubes for quality control verification.',
     color: 'from-primary to-accent'
   }, {
