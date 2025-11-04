@@ -22,7 +22,12 @@ const Footer: React.FC = () => {
     name: 'Contact',
     href: '/contact'
   }];
-  const servicesList = ['UCS Testing', 'Sample Management', 'Scheduled Testing', 'Compliance Reporting', 'Quality Assurance', 'Expert Consultation'];
+  const servicesList = [
+    'Concrete Cylinders or Cubes',
+    'Shotcrete Cores', 
+    'Cement Grout',
+    'Backfill Testing'
+  ];
   const currentYear = new Date().getFullYear();
   return <footer className="bg-secondary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
