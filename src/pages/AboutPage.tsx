@@ -248,7 +248,7 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
               Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Goldfields Testing</span> Laboratory?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              The operational advantage in concrete testing
+              The operational advantage in UCS testing
             </p>
           </div>
 
