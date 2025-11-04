@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import gtLabLogo from '../assets/GT_Lab_Logo_big.png';
 const Footer: React.FC = () => {
   const links = [{
@@ -74,12 +74,6 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Follow Us</h3>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200">
-                <Instagram className="w-5 h-5" />
-              </a>
               <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200">
                 <Linkedin className="w-5 h-5" />
               </a>
