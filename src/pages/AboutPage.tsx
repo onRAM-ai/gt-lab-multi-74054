@@ -108,18 +108,23 @@ const AboutPage: React.FC = () => {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Centered Header Section */}
+            <div className="text-center mb-20 animate-fade-in">
+              <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                <span className="block">About</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  Goldfields Testing Laboratory
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Your trusted partner for concrete, shotcrete, grout &amp; backfill QAQC.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               {/* Content with slide-in animations */}
               <div className="space-y-8">
                 <div className="space-y-6 animate-fade-in">
-                  <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
-                    <span className="block">About <span className="text-primary">Goldfields</span></span>
-                    <span className="block">
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Testing </span>
-                      <span className="text-gray-900">Laboratory</span>
-                    </span>
-                  </h1>
-                  <h2 className="text-2xl text-gray-700 font-light italic">Your trusted partner for concrete, shotcrete, grout &amp; backfill QAQC.</h2>
                   <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">
                     Goldfields Testing Laboratory are a Kalgoorlie based laboratory specialising in mining ground support quality control testing. We provide high quality testing of shotcrete and cable bolt grout materials.
 
