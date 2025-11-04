@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 pt-0">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content with slide-in animation */}
               <div className="text-center lg:text-left animate-fade-in">
