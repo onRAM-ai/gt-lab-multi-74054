@@ -7,6 +7,7 @@ import gtLabLogo from '@/assets/GT_Lab_Logo_big.png';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const location = useLocation();
 
@@ -47,6 +48,20 @@ const Header: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Track scroll position for navbar effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
@@ -64,8 +79,14 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-lg shadow-lg border-b border-gray-200/50 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <header className={`fixed top-0 left-0 right-0 backdrop-blur-lg border-b border-gray-200/50 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/70 shadow-xl' 
+        : 'bg-white/90 shadow-lg'
+    }`}>
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
+        isScrolled ? 'py-2' : 'py-4'
+      }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center min-w-[120px] sm:min-w-[160px]">
@@ -76,7 +97,9 @@ const Header: React.FC = () => {
               height="50"
               loading="eager"
               fetchPriority="high"
-              className="h-10 sm:h-15 w-auto object-contain"
+              className={`w-auto object-contain transition-all duration-300 ${
+                isScrolled ? 'h-8 sm:h-12' : 'h-10 sm:h-15'
+              }`}
             />
           </div>
 
