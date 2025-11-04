@@ -276,7 +276,7 @@ const ContactPage: React.FC = () => {
                           Email
                         </h3>
                         <p className="text-gray-600">
-                          testing@gtlabkalgoorlie.com.au
+                          labmanager@gtlab.com.au
                         </p>
                       </div>
                     </div>
