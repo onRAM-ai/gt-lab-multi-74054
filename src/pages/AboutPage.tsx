@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Target, Award, MapPin } from 'lucide-react';
+import { Users, Target, Award, MapPin, Wrench, DollarSign, Shield, Clock } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import gtLabLogo from '../assets/gt-lab-logo.jpg';
@@ -241,53 +241,70 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
           </div>
         </div>
 
-        {/* Process Timeline */}
+        {/* Why GT Lab Section */}
         <div className="border-t border-gray-200 pt-20 mt-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Our Process
+              Why Choose GT Lab?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From sample delivery to final reporting - our streamlined process
+              The operational advantage in concrete testing
             </p>
           </div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent"></div>
-            
-            <div className="space-y-12">
-              {[{
-                  step: 1,
-                  title: 'Sample Collection & Delivery',
-                  description: 'Secure sample delivery with proper chain of custody documentation and labeling according to Australian Standards.'
-                }, {
-                  step: 2,
-                  title: 'Laboratory Registration',
-                  description: 'Professional cataloguing and storage in our controlled environment with full traceability systems.'
-                }, {
-                  step: 3,
-                  title: 'Testing Execution',
-                  description: 'Precise UCS testing at required intervals using calibrated equipment and Australian Standard procedures.'
-                }, {
-                  step: 4,
-                  title: 'Results & Reporting',
-                  description: 'Comprehensive digital reports.'
-                }].map((item, index) => <div key={index} className="relative flex items-center">
-                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10`}>
-                    {item.step}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Wrench,
+                title: 'Operational Experience',
+                description: 'Our team combines laboratory expertise with hands-on mining operations experience, providing insights that pure lab technicians cannot offer.'
+              },
+              {
+                icon: MapPin,
+                title: 'Local Kalgoorlie Service',
+                description: 'Based in the heart of the Goldfields, we provide faster turnaround times and understand local mining conditions and requirements.'
+              },
+              {
+                icon: DollarSign,
+                title: 'Competitive Pricing',
+                description: 'We have price-checked against our competitors and consistently match or beat their pricing while maintaining superior service quality.'
+              },
+              {
+                icon: Shield,
+                title: 'Australian Standards Compliant',
+                description: 'All our testing procedures strictly adhere to Australian Standards, ensuring your results meet regulatory and industry requirements.'
+              },
+              {
+                icon: Clock,
+                title: 'Reliable Scheduling',
+                description: 'Precise testing at 7, 14, and 28-day intervals with consistent, dependable reporting that fits your project timelines.'
+              },
+              {
+                icon: Users,
+                title: 'Mining-Focused Service',
+                description: 'We specialize exclusively in serving mining companies and contractors, understanding your unique operational challenges and requirements.'
+              }
+            ].map((advantage, index) => {
+              const IconComponent = advantage.icon;
+              return (
+                <div
+                  key={index}
+                  className="group bg-white border-2 border-primary/20 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 ml-auto'}`}>
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>)}
-            </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
+                    {advantage.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
+                    {advantage.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
