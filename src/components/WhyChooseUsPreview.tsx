@@ -57,7 +57,7 @@ const WhyChooseUsPreview: React.FC = () => {
             },
             {
               icon: Users,
-              title: "Operational Mining Experience",
+              title: "Over 60+yrs of operational and technical mining experience",
               description:
                 "As Kalgoorlie locals, we're right where you need us - delivering fast, reliable service without the delays of distant labs",
             },
