@@ -277,7 +277,7 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
               {
                 icon: Clock,
                 title: 'Reliable Results',
-                description: 'Precise testing at 7, 14, and 28-day intervals with consistent, dependable reporting that fits your project timelines.'
+                description: 'Consistent and dependable testing and reporting that fits your project timelines.'
               }
             ].map((advantage, index) => {
               const IconComponent = advantage.icon;
