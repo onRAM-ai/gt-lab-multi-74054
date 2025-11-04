@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Content Section with "For Mining Operations" and Details */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-100">
+        <section className="relative flex justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-100">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Floating geometric shapes with mining colors */}
