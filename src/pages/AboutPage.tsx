@@ -219,9 +219,9 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Laboratory Leadership
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Our team brings over 15 years of combined experience in mining operations and concrete testing, ensuring results that truly serve the mining industry.
-                </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Our team brings over 65 years of combined experience in mining operations and concrete testing, ensuring results that truly serve the mining industry.
+                  </p>
               </div>
             </div>
 
