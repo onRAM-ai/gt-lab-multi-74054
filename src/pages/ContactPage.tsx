@@ -34,7 +34,7 @@ const ContactPage: React.FC = () => {
         title: 'Laboratory Information',
         address: '32 Vivian St, South Boulder, WA',
         phone: '+61 428 466 070',
-        email: 'testing@gtlabkalgoorlie.com.au',
+        email: 'labmanager@gtlab.com.au',
         hours: 'Mon - Fri: 7:00 AM - 5:00 PM'
       },
       sampleDelivery: 'Sample Delivery Instructions',
@@ -62,7 +62,7 @@ const ContactPage: React.FC = () => {
         title: 'Información del Laboratorio',
         address: '32 Vivian St, South Boulder, WA',
         phone: '+61 428 466 070',
-        email: 'testing@gtlabkalgoorlie.com.au',
+        email: 'labmanager@gtlab.com.au',
         hours: 'Lun - Vie: 7:00 AM - 5:00 PM'
       },
       sampleDelivery: 'Instrucciones de Entrega de Muestras',

@@ -35,8 +35,8 @@ const ContactCTA: React.FC = () => {
           }, {
             icon: Mail,
             label: 'Email Us',
-            value: 'info@gtlabkalgoorlie.com',
-            action: 'mailto:info@gtlabkalgoorlie.com',
+            value: 'labmanager@gtlab.com.au',
+            action: 'mailto:labmanager@gtlab.com.au',
             type: 'mailto'
           }, {
             icon: MapPin,
