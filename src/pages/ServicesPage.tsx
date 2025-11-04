@@ -1,78 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Beaker, Clock, FileText, Users, Shield, Trophy } from 'lucide-react';
+import { Clock, Shield, Trophy } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-const ServicesPage: React.FC = () => {
-  const content = {
-    en: {
-      title: 'Testing Services',
-      subtitle: 'Ground Support QAQC Testing for Mining Operations',
-      services: [{
-        icon: FileText,
-        title: 'Concrete Cylinders or Cubes',
-        description: 'Compressive strength testing of concrete cylinders or cubes for quality control verification.',
-        color: 'from-primary to-accent'
-      }, {
-        icon: Beaker,
-        title: 'Shotcrete Cores',
-        description: 'Compressive strength testing of shotcrete cores to Australian Standards using calibrated equipment.',
-        color: 'from-primary to-accent'
-      }, {
-        icon: Shield,
-        title: 'Cement Grout',
-        description: 'Compressive strength testing of cement grout cylinders or cubes for cable bolt applications.',
-        color: 'from-accent to-primary'
-      }, {
-        icon: Trophy,
-        title: 'Backfill Testing',
-        description: 'Compressive strength testing of backfill (paste or CAF) cylinders for mining applications.',
-        color: 'from-primary to-accent'
-      }],
-      process: {
-        title: 'Our Testing Process',
-        steps: ['Sample Collection & Delivery', 'Laboratory Registration', 'Testing Execution', 'Results & Reporting']
-      },
-      cta: 'Request Testing Quote',
-      pageTitle: 'Ground Support Testing Services - Goldfields Testing Laboratory',
-      pageDescription: 'Professional ground support QAQC testing services for mining. Shotcrete, concrete, grout and backfill testing to Australian Standards. High quality, reliable results.',
-      breadcrumb: 'Services'
-    },
-    es: {
-      title: 'Servicios de Pruebas',
-      subtitle: 'Pruebas QAQC de Soporte de Terreno para Operaciones Mineras',
-      services: [{
-        icon: FileText,
-        title: 'Cilindros o Cubos de Concreto',
-        description: 'Pruebas de resistencia a la compresión de cilindros o cubos de concreto para verificación de control de calidad.',
-        color: 'from-primary to-accent'
-      }, {
-        icon: Beaker,
-        title: 'Núcleos de Shotcrete',
-        description: 'Pruebas de resistencia a la compresión de núcleos de shotcrete según estándares australianos usando equipo calibrado.',
-        color: 'from-primary to-accent'
-      }, {
-        icon: Shield,
-        title: 'Lechada de Cemento',
-        description: 'Pruebas de resistencia a la compresión de cilindros o cubos de lechada de cemento para aplicaciones de pernos de cable.',
-        color: 'from-accent to-primary'
-      }, {
-        icon: Trophy,
-        title: 'Pruebas de Relleno',
-        description: 'Pruebas de resistencia a la compresión de cilindros de relleno (pasta o CAF) para aplicaciones mineras.',
-        color: 'from-primary to-accent'
-      }],
-      process: {
-        title: 'Nuestro Proceso de Pruebas',
-        steps: ['Recolección y Entrega de Muestras', 'Registro de Laboratorio', 'Ejecución de Pruebas', 'Resultados y Reportes']
-      },
-      cta: 'Solicitar Cotización de Pruebas',
-      pageTitle: 'Servicios de Pruebas de Soporte de Terreno - Goldfields Testing Laboratory',
-      pageDescription: 'Servicios profesionales de pruebas QAQC de soporte de terreno para minería. Pruebas de shotcrete, concreto, lechada y relleno según estándares australianos. Resultados confiables de alta calidad.',
-      breadcrumb: 'Servicios'
-    }
-  };
+import concreteSpecimens from '../assets/services/concrete-specimens.jpg';
+import shotcreteCores from '../assets/services/shotcrete-cores.jpg';
+import cementGrout from '../assets/services/cement-grout.jpg';
+import backfillTesting from '../assets/services/backfill-testing.jpg';
 
+const ServicesPage: React.FC = () => {
   // Set page title and meta description
   React.useEffect(() => {
     document.title = 'Ground Support Testing Services - Goldfields Testing Laboratory';
@@ -87,22 +23,22 @@ const ServicesPage: React.FC = () => {
     }
   }, []);
   const services = [{
-    icon: FileText,
+    image: concreteSpecimens,
     title: 'Concrete Cylinders or Cubes (AS 1012.9 & 1012.12.1)',
     description: 'Compressive strength testing of concrete cylinders or cubes for quality control verification.',
     color: 'from-primary to-accent'
   }, {
-    icon: Beaker,
+    image: shotcreteCores,
     title: 'Shotcrete Cores (AS 1012.14)',
     description: 'Compressive strength testing of shotcrete cores to Australian Standards using calibrated equipment.',
     color: 'from-primary to-accent'
   }, {
-    icon: Shield,
+    image: cementGrout,
     title: 'Cement Grout',
     description: 'Compressive strength testing of cement grout cylinders or cubes for cable bolt applications.',
     color: 'from-accent to-primary'
   }, {
-    icon: Trophy,
+    image: backfillTesting,
     title: 'Backfill Testing',
     description: 'Compressive strength testing of backfill (paste or CAF) cylinders for mining applications.',
     color: 'from-primary to-accent'
@@ -154,27 +90,28 @@ const ServicesPage: React.FC = () => {
             {/* Enhanced Services Grid - WHITE CARDS */}
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
               {services.map((service, index) => {
-              const IconComponent = service.icon;
-              return <div key={index} className="group relative bg-white rounded-3xl p-8 shadow-2xl hover:shadow-primary/25 transition-all duration-500 transform hover:-translate-y-4 border border-gray-100 overflow-hidden animate-fade-in" style={{
+              return <div key={index} className="group relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-primary/25 transition-all duration-500 transform hover:-translate-y-4 border border-gray-100 animate-fade-in" style={{
                 animationDelay: `${index * 100}ms`
               }}>
-                    {/* Animated background gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    {/* Floating icon container with service colors */}
-                    <div className={`relative flex items-center justify-center w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
-                      <IconComponent className="w-10 h-10 text-white drop-shadow-lg" />
-                      
-                      {/* Orbiting dot */}
-                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-accent to-primary rounded-full animate-bounce opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    {/* Image container */}
+                    <div className="relative h-64 overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-                      {service.description}
-                    </p>
+                    {/* Content */}
+                    <div className="p-8">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                        {service.description}
+                      </p>
+                    </div>
 
                     {/* Hover effect line with service color */}
                     <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${service.color} group-hover:w-full transition-all duration-500`}></div>
