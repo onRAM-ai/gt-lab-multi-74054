@@ -64,11 +64,11 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-transparent z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-3 items-center">
+    <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-lg shadow-lg border-b border-gray-200/50 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center min-w-[120px] sm:min-w-[160px] justify-self-start">
+          <div className="flex items-center min-w-[120px] sm:min-w-[160px]">
             <img 
               src={gtLabLogo} 
               alt="Goldfields Testing Laboratory"
@@ -80,35 +80,31 @@ const Header: React.FC = () => {
             />
           </div>
 
-          {/* Pill-style Navigation */}
-          <nav className="hidden md:flex justify-self-center">
-            <div className="bg-white/90 backdrop-blur-lg rounded-full px-6 py-1.5 shadow-lg border border-gray-200/50">
-              <div className="flex items-center space-x-8">
-                {navigation.map((item) => {
-                  const isActive = location.pathname === item.href;
-                  return (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${
-                        isActive 
-                          ? 'text-gray-900' 
-                          : 'text-gray-600 hover:text-gray-900'
-                      }`}
-                    >
-                      {item.name}
-                      {isActive && (
-                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gray-900 rounded-full transition-all duration-300"></div>
-                      )}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
+          {/* Full-Width Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => {
+              const isActive = location.pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                    isActive 
+                      ? 'text-gray-900' 
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gray-900 rounded-full transition-all duration-300"></div>
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center justify-self-end">
+          <div className="flex items-center">
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
