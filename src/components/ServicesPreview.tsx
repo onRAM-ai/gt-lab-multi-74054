@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Beaker, FileCheck, Shield, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const ServicesPreview: React.FC = () => {
   return (
@@ -18,61 +18,35 @@ const ServicesPreview: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {[
             {
-              icon: FileCheck,
               title: 'Concrete Specimens',
-              description: 'Compressive strength of concrete cylinders or cubes',
-              features: ['Accurate Results', 'On Time']
+              description: 'Compressive strength of concrete cylinders or cubes'
             },
             {
-              icon: Beaker,
               title: 'Shotcrete Cores',
-              description: 'Compressive strength of shotcrete cores',
-              features: ['AS Compliant', 'High Quality']
+              description: 'Compressive strength of shotcrete cores'
             },
             {
-              icon: Shield,
               title: 'Cement Grout',
-              description: 'Compressive strength of cement grout cylinders or cubes',
-              features: ['Cable Bolt QAQC', 'Reliable Testing']
+              description: 'Compressive strength of cement grout cylinders or cubes'
             },
             {
-              icon: Clock,
               title: 'Backfill Testing',
-              description: 'Compressive strength of backfill (paste or CAF) cylinders',
-              features: ['Mining Applications', 'Professional Service']
+              description: 'Compressive strength of backfill (paste or CAF) cylinders'
             }
-          ].map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-              >
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="w-6 h-6 text-primary" />
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <span
-                      key={featureIndex}
-                      className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {service.title}
+              </h3>
+              
+              <p className="text-gray-600 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         <div className="text-center">
