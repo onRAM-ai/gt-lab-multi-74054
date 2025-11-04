@@ -39,10 +39,10 @@ const HomePage: React.FC = () => {
             <div className="absolute bottom-20 right-20 w-40 h-40 rounded-full bg-gradient-to-r from-secondary/20 to-primary/20 animate-pulse delay-1000 blur-xl"></div>
           </div>
 
-          {/* "Quality Control" Heading */}
+          {/* "UCS TESTING" Heading */}
           <div className="relative z-10 text-center animate-fade-in">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-4 leading-tight drop-shadow-2xl">
-              Quality Control
+              UCS TESTING
             </h1>
           </div>
         </section>
