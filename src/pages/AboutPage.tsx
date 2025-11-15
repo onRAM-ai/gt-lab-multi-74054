@@ -116,9 +116,7 @@ const AboutPage: React.FC = () => {
                   Goldfields Testing Laboratory
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Your trusted partner for concrete, shotcrete, grout &amp; backfill QAQC.
-              </p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Your trusted partner for concrete, shotcrete, grout &amp; backfill testing.</p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -253,40 +251,31 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
+            {[{
                 icon: Wrench,
                 title: 'Operational Experience',
                 description: 'Our team combines laboratory expertise with hands-on mining operations experience, providing insights that pure lab technicians cannot offer.'
-              },
-              {
+              }, {
                 icon: MapPin,
                 title: 'Local Kalgoorlie Service',
                 description: 'Based in the heart of the Goldfields, we provide faster turnaround times and understand local mining conditions and requirements.'
-              },
-              {
+              }, {
                 icon: DollarSign,
                 title: 'Competitive Pricing',
                 description: 'We have price-checked against our competitors and consistently match or beat their pricing while maintaining superior service quality.'
-              },
-              {
+              }, {
                 icon: Shield,
                 title: 'Australian Standards Compliant',
                 description: 'All our testing procedures strictly adhere to Australian Standards, ensuring your results meet regulatory and industry requirements.'
-              },
-              {
+              }, {
                 icon: Clock,
                 title: 'Reliable Results',
                 description: 'Consistent and dependable testing and reporting that fits your project timelines.'
-              }
-            ].map((advantage, index) => {
-              const IconComponent = advantage.icon;
-              return (
-                <div
-                  key={index}
-                  className="group bg-white border-2 border-primary/20 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              }].map((advantage, index) => {
+                const IconComponent = advantage.icon;
+                return <div key={index} className="group bg-white border-2 border-primary/20 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2" style={{
+                  animationDelay: `${index * 100}ms`
+                }}>
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -297,9 +286,8 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
                   <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                     {advantage.description}
                   </p>
-                </div>
-              );
-            })}
+                </div>;
+              })}
           </div>
         </div>
       </div>
