@@ -70,9 +70,7 @@ const HomePage: React.FC = () => {
                 </span>
               </h2>
 
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-300">
-                Professional ground support QAQC testing services for mining companies. Concrete, shotcrete, grout and backfill testing to Australian Standards with personal, professional service.
-              </p>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-300">Concrete testing services for mining and construction companies. Concrete, shotcrete, grout and backfill testing to Australian Standards with personal, professional service. </p>
 
               {/* Floating Feature Tags */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
