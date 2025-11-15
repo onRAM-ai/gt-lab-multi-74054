@@ -64,7 +64,7 @@ const HomePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 pt-16">
             {/* Centered Content */}
             <div className="text-center animate-fade-in">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight pb-2">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary animate-gradient-x">
                   For Mining and Construction
                 </span>
