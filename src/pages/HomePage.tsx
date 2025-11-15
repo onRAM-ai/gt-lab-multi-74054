@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
 
               {/* Floating Feature Tags */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {['Australian Standard Compliant', 'High Quality Testing', 'Personal Service'].map((feature, index) => <span key={index} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-white to-gray-50 rounded-full text-sm font-semibold text-gray-700 shadow-lg border border-gray-200 hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-fade-in" style={{
+              {['Australian Standards Compliant', 'High Quality Testing', 'Personal Service'].map((feature, index) => <span key={index} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-white to-gray-50 rounded-full text-sm font-semibold text-gray-700 shadow-lg border border-gray-200 hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-fade-in" style={{
                 animationDelay: `${400 + index * 100}ms`
               }}>
                     {feature}
