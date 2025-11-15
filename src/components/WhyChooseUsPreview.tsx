@@ -38,7 +38,7 @@ const WhyChooseUsPreview: React.FC = () => {
             {
               icon: Award,
               title: "Australian Standard Compliant",
-              description: "All testing procedures follow AS standards for guaranteed reliability",
+              description: "All testing procedures follows AS and ASTM standards for guranteed reliability",
             },
             {
               icon: Users,
