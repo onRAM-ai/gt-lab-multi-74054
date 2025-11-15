@@ -29,8 +29,8 @@ const ContactCTA: React.FC = () => {
             {[{
             icon: Phone,
             label: 'Call Us',
-            value: '+61 8 9021 3333',
-            action: 'tel:+61890213333',
+            value: '+61 428 466 070',
+            action: 'tel:+61428466070',
             type: 'tel'
           }, {
             icon: Mail,
