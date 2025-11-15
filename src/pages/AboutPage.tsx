@@ -124,7 +124,7 @@ const AboutPage: React.FC = () => {
               <div className="space-y-8">
                 <div className="space-y-6 animate-fade-in">
                   <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">
-                    Goldfields Testing Laboratory are a Kalgoorlie based laboratory specialising in mining ground support quality control testing. We provide high quality testing of shotcrete and cable bolt grout materials.
+                    Goldfields Testing Laboratory are a Kalgoorlie based laboratory specialising in concrete, shotcrete, grout &amp; backfill testing. We provide high quality testing of shotcrete and cable bolt grout materials.
 
 Our well-trained staff ensure that your test results are accurate, reliable and on time. We pride ourselves on our ability to provide you with a personal yet professional service.
                   </p>
