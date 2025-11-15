@@ -88,7 +88,7 @@ const ServicesPage: React.FC = () => {
                   Services
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Concrete and Ground Support QAQC Testing for Mining Operations</p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Concrete testing to Australian and ASTM standards</p>
             </div>
 
             {/* Enhanced Services Grid - WHITE CARDS */}
