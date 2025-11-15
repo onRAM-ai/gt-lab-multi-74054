@@ -23,7 +23,8 @@ const Footer: React.FC = () => {
     'Concrete Cylinders or Cubes',
     'Shotcrete Cores', 
     'Cement Grout',
-    'Backfill Testing'
+    'Backfill Testing',
+    'Round Determinate Panel (RDP)'
   ];
   const currentYear = new Date().getFullYear();
   return <footer className="bg-secondary text-white">

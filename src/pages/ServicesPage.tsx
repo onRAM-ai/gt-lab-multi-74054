@@ -41,6 +41,11 @@ const ServicesPage: React.FC = () => {
     title: 'Backfill Testing',
     description: 'Compressive strength testing of backfill (paste or CAF) cylinders for mining applications.',
     color: 'from-primary to-accent'
+  }, {
+    image: shotcreteCores,
+    title: 'Round Determinate Panel (RDP) - ASTM C1550',
+    description: 'Flexural testing of shotcrete using the Round Determinate Panel (RDP) method to assess energy absorption and toughness for ground support applications. Typically follows ASTM C1550 or relevant project-specific guidelines.',
+    color: 'from-primary to-accent'
   }];
   const processSteps = ['Sample Collection & Delivery', 'Laboratory Registration', 'Testing Execution', 'Results & Reporting'];
   return <div className="min-h-screen">
