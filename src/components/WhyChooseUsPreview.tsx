@@ -32,20 +32,6 @@ const WhyChooseUsPreview: React.FC = () => {
           ))}
         </div>
 
-        {/* Featured Laboratory Image */}
-        <div className="mb-16 relative overflow-hidden rounded-3xl shadow-2xl group animate-fade-in">
-          <img 
-            src={labFacility}
-            alt="Australian Standards compliant testing facility"
-            className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/20 to-transparent"></div>
-          <div className="absolute bottom-8 left-8 right-8 text-white">
-            <h3 className="text-3xl font-bold mb-2">State-of-the-Art Facility</h3>
-            <p className="text-lg opacity-90">Professional mining ground support testing in Kalgoorlie</p>
-          </div>
-        </div>
-
         {/* Highlights Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {[
