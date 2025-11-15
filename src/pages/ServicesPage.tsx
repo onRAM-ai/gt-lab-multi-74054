@@ -43,7 +43,7 @@ const ServicesPage: React.FC = () => {
     color: 'from-primary to-accent'
   }, {
     image: shotcreteCores,
-    title: 'Round Determinate Panel (RDP) - ASTM C1550',
+    title: 'Round Determinate Panel (RDP)',
     description: 'Flexural testing of shotcrete using the Round Determinate Panel (RDP) method to assess energy absorption and toughness for ground support applications. Typically follows ASTM C1550 or relevant project-specific guidelines.',
     color: 'from-primary to-accent'
   }];
