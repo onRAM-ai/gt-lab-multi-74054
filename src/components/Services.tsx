@@ -1,5 +1,5 @@
 import React from 'react';
-import { Beaker, Clock, FileText, Users, Shield, Trophy } from 'lucide-react';
+import { Beaker, Clock, FileText, Users, Shield, Trophy, Circle } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -25,6 +25,12 @@ const Services: React.FC = () => {
       icon: Trophy,
       title: 'Backfill Testing',
       description: 'Compressive strength testing of backfill (paste or CAF) cylinders for mining applications.',
+      color: 'from-primary to-accent'
+    },
+    {
+      icon: Circle,
+      title: 'Round Determinate Panel (RDP)',
+      description: 'Flexural testing of shotcrete using the Round Determinate Panel (RDP) method to assess energy absorption and toughness for ground support applications.',
       color: 'from-primary to-accent'
     }
   ];
