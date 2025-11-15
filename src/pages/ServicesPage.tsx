@@ -29,7 +29,7 @@ const ServicesPage: React.FC = () => {
   }, {
     image: shotcreteCores,
     title: 'Shotcrete Cores (AS 1012.14)',
-    description: 'Compressive strength testing of shotcrete cores to Australian Standards using calibrated equipment.',
+    description: 'Compressive strength testing of shotcrete cores for quality control verification.',
     color: 'from-primary to-accent'
   }, {
     image: cementGrout,
