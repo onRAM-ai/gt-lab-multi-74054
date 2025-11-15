@@ -333,9 +333,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     
                     <div className="border-b border-gray-200 pb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        How can samples be delivered to laboratory?
-                      </h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">How can samples be delivered to the laboratory?</h4>
                       <p className="text-gray-600">
                         Samples can be dropped off by the client or delivered via transport companies to the laboratory located at 32 Vivian St, South Boulder. The office is open from 6am-5pm, Monday to Friday.
                       </p>
