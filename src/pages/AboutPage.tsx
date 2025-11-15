@@ -138,7 +138,7 @@ Our well-trained staff ensure that your test results are accurate, reliable and 
                       Mission
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      To provide accurate and reliable ground support quality control testing services that mining companies can trust. We combine laboratory excellence with personal service to deliver results that meet your ground support QAQC requirements.
+                      To provide accurate and reliable ground support quality control testing services that mining companies can trust. We combine laboratory excellence with personal service to deliver results that meet your ground testing requirements.
                     </p>
                   </div>
                   <div className="bg-gradient-to-r from-accent/5 to-primary/5 border-2 border-accent/20 rounded-2xl p-6 hover:border-accent/40 transition-all duration-300 transform hover:scale-105">
