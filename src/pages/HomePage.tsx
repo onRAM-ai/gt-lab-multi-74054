@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
       
       <main>
         {/* Photo Header Section with "Quality Control" */}
-        <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[70vh] flex items-end justify-center overflow-hidden pb-20">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img src={labFacility} alt="Goldfields Testing Laboratory Facility" className="w-full h-full object-cover" />
