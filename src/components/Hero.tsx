@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ArrowRight, Beaker, BarChart, Shield } from 'lucide-react';
 import QuoteForm from './QuoteForm';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
@@ -9,6 +9,11 @@ import heroImage3 from '../assets/hero-carousel-3.jpg';
 
 const Hero: React.FC = () => {
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
+  
+  // Create Autoplay plugin with useRef to persist across renders
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
 
   const handleGetQuote = () => {
     window.location.href = '/#contact';
@@ -91,11 +96,7 @@ const Hero: React.FC = () => {
                   align: "start",
                   loop: true,
                 }}
-                plugins={[
-                  Autoplay({
-                    delay: 4000,
-                  }),
-                ]}
+                plugins={[autoplayPlugin.current]}
                 className="w-full"
               >
                 <CarouselContent>
