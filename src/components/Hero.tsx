@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { ArrowRight, Beaker, BarChart, Shield } from 'lucide-react';
 import QuoteForm from './QuoteForm';
-import gtLabLogo from '../assets/GT_Lab_Logo_big.png';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import heroImage1 from '../assets/hero-carousel-1.jpg';
+import heroImage2 from '../assets/hero-carousel-2.jpg';
+import heroImage3 from '../assets/hero-carousel-3.jpg';
 
 const Hero: React.FC = () => {
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
@@ -79,25 +83,56 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Enhanced Logo Section */}
+          {/* Lab Testing Carousel */}
           <div className="flex justify-center lg:justify-end animate-fade-in delay-700">
-            <div className="relative group">
-              {/* Multiple gradient layers for depth */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-accent/30 to-secondary/30 rounded-full blur-3xl scale-150 animate-pulse-once"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-2xl scale-125 animate-pulse-once delay-1000"></div>
-              
-              {/* Floating ring animation - only on hover */}
-              <div className="absolute inset-0 border-4 border-gradient-to-r from-primary/50 to-transparent rounded-full group-hover:animate-spin" style={{ animationDuration: '10s' }}></div>
-              
-              <img 
-                src={gtLabLogo}
-                alt="Goldfields Testing Laboratory Logo"
-                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-500 animate-float-once"
-              />
-              
-              {/* Orbiting elements */}
-              <div className="absolute top-4 right-4 w-4 h-4 bg-gradient-to-r from-primary to-accent rounded-full animate-bounce delay-300"></div>
-              <div className="absolute bottom-8 left-8 w-3 h-3 bg-gradient-to-r from-accent to-secondary rounded-full animate-bounce delay-700"></div>
+            <div className="relative w-full max-w-2xl">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 4000,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src={heroImage1}
+                        alt="Concrete testing specimens in laboratory"
+                        className="w-full h-[400px] md:h-[500px] object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src={heroImage2}
+                        alt="Concrete core samples being tested"
+                        className="w-full h-[400px] md:h-[500px] object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src={heroImage3}
+                        alt="Laboratory testing equipment and specimens"
+                        className="w-full h-[400px] md:h-[500px] object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
             </div>
           </div>
         </div>
