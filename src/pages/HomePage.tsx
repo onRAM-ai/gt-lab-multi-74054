@@ -27,14 +27,6 @@ const HomePage: React.FC = () => {
             <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 animate-pulse blur-xl"></div>
             <div className="absolute top-40 left-1/4 w-24 h-64 rounded-full bg-gradient-to-r from-secondary/20 to-primary/20 rotate-45 animate-bounce delay-1000 blur-xl"></div>
             <div className="absolute bottom-20 left-1/6 w-40 h-20 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 rotate-12 animate-pulse delay-2000 blur-xl"></div>
-            
-            {/* Floating laboratory elements */}
-            <div className="absolute top-1/4 left-1/3 animate-bounce delay-500">
-              <Beaker className="w-6 h-6 text-primary opacity-60" />
-            </div>
-            <div className="absolute bottom-1/4 left-1/6 animate-bounce delay-700">
-              <Shield className="w-5 h-5 text-accent opacity-50" />
-            </div>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
