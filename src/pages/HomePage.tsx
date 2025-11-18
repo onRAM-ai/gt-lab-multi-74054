@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
               <div className="relative z-10 text-center lg:text-left animate-fade-in">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-tight">
                   <span className="block">Concrete Testing</span>
-                  <span className="block">Laboratory</span>
+                  <span className="block"> </span>
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary animate-gradient-x">
                     For Mining Excellence
                   </span>
