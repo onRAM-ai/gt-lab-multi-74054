@@ -64,7 +64,9 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-6">Testing Services</h3>
             <ul className="space-y-3">
               {servicesList.map((service, index) => <li key={index}>
-                  <span className="text-primary/80 text-sm">{service}</span>
+                  <Link to="/services" className="text-primary/80 hover:text-primary transition-colors duration-200 text-sm">
+                    {service}
+                  </Link>
                 </li>)}
             </ul>
           </div>
