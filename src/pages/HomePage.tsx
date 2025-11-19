@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ArrowRight, Beaker, BarChart, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -9,13 +9,27 @@ import WhyChooseUsPreview from '../components/WhyChooseUsPreview';
 import ClientsSection from '../components/ClientsSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import ContactCTA from '../components/ContactCTA';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import gtLabLogo from '../assets/GT_Lab_Logo_big.png';
 import labFacility from '../assets/lab-facility.jpg';
+import labInterior from '../assets/lab-interior.jpg';
+import labEquipment from '../assets/lab-equipment.jpg';
 const HomePage: React.FC = () => {
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+  
   const handleGetQuote = () => {
     setIsQuoteFormOpen(true);
   };
+
+  const heroImages = [
+    { src: labFacility, alt: "Goldfields Testing Laboratory Facility" },
+    { src: labInterior, alt: "Laboratory Interior and Testing Equipment" },
+    { src: labEquipment, alt: "Advanced Laboratory Testing Equipment" }
+  ];
   return <div className="min-h-screen">
       <Header />
       
@@ -78,15 +92,30 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* RIGHT: Photo Column */}
+              {/* RIGHT: Photo Column - Carousel */}
               <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in delay-300">
-                <img 
-                  src={labFacility} 
-                  alt="Goldfields Testing Laboratory Facility" 
-                  className="w-full h-full object-cover"
-                />
-                {/* Subtle overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+                <Carousel
+                  plugins={[plugin.current]}
+                  className="w-full h-full"
+                  onMouseEnter={plugin.current.stop}
+                  onMouseLeave={plugin.current.reset}
+                >
+                  <CarouselContent className="h-full">
+                    {heroImages.map((image, index) => (
+                      <CarouselItem key={index} className="h-[400px] lg:h-[600px]">
+                        <img 
+                          src={image.src} 
+                          alt={image.alt}
+                          className="w-full h-full object-cover"
+                        />
+                        {/* Subtle overlay for depth */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
               </div>
 
             </div>
