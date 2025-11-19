@@ -7,6 +7,7 @@ import concreteSpecimens from '../assets/services/concrete-specimens.jpg';
 import shotcreteCores from '../assets/services/shotcrete-cores.jpg';
 import cementGrout from '../assets/services/cement-grout.jpg';
 import backfillTesting from '../assets/services/backfill-testing.jpg';
+import rdpTesting from '../assets/services/rdp-testing.jpg';
 const ServicesPage: React.FC = () => {
   // Set page title and meta description
   React.useEffect(() => {
@@ -42,7 +43,7 @@ const ServicesPage: React.FC = () => {
     description: 'Compressive strength testing of backfill (paste or CAF) cylinders for mining applications.',
     color: 'from-primary to-accent'
   }, {
-    image: shotcreteCores,
+    image: rdpTesting,
     title: 'Round Determinate Panel (ASTM C1550)',
     description: 'Flexural toughness test for fibre-reinforced shotcrete.',
     color: 'from-primary to-accent'
