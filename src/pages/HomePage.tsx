@@ -18,7 +18,7 @@ import labEquipment from '../assets/lab-equipment.jpg';
 const HomePage: React.FC = () => {
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
   const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true })
   );
   
   const handleGetQuote = () => {
