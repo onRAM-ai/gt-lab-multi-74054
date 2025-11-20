@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* RIGHT: Photo Column - Carousel */}
-              <div className="relative h-[600px] lg:h-[850px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in delay-300">
+              <div className="relative h-[350px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in delay-300">
                 <Carousel
                   plugins={[plugin.current]}
                   className="w-full h-full"
@@ -87,7 +87,7 @@ const HomePage: React.FC = () => {
                 >
                   <CarouselContent className="h-full">
                     {heroImages.map((image, index) => (
-                      <CarouselItem key={index} className="h-[600px] lg:h-[850px]">
+                      <CarouselItem key={index} className="h-[350px] lg:h-[420px]">
                         <img 
                           src={image.src} 
                           alt={image.alt}
