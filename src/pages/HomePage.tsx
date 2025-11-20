@@ -109,7 +109,7 @@ const HomePage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-500">
                   <Link
                     to="/contact"
-                    className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary via-accent to-primary text-white font-bold rounded-xl shadow-2xl hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+                    className="group relative inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-primary via-accent to-primary text-white font-bold rounded-xl shadow-2xl hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden"
                   >
                     <span className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     <span className="relative">Request Testing Services</span>
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
                   </Link>
                   <Link
                     to="/services"
-                    className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold rounded-xl border-2 border-transparent hover:from-white hover:to-gray-50 hover:text-gray-900 hover:border-gray-300 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="group inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold rounded-xl border-2 border-transparent hover:from-white hover:to-gray-50 hover:text-gray-900 hover:border-gray-300 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Learn About Services
                   </Link>
