@@ -77,51 +77,55 @@ const HomePage: React.FC = () => {
 
               </div>
 
-              {/* RIGHT: Photo Column - Carousel */}
-              <div className="relative h-[450px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in delay-300">
-                <Carousel
-                  plugins={[plugin.current]}
-                  className="w-full h-full"
-                  onMouseEnter={plugin.current.stop}
-                  onMouseLeave={plugin.current.reset}
-                >
-                  <CarouselContent className="h-full">
-                    {heroImages.map((image, index) => (
-                      <CarouselItem key={index} className="h-[450px] lg:h-[550px]">
-                        <img 
-                          src={image.src} 
-                          alt={image.alt}
-                          className="w-full h-full object-cover"
-                        />
-                        {/* Subtle overlay for depth */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-4" />
-                  <CarouselNext className="right-4" />
-                </Carousel>
+              {/* RIGHT: Photo Column + Buttons */}
+              <div className="flex flex-col gap-6">
+                {/* Carousel */}
+                <div className="relative h-[450px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in delay-300">
+                  <Carousel
+                    plugins={[plugin.current]}
+                    className="w-full h-full"
+                    onMouseEnter={plugin.current.stop}
+                    onMouseLeave={plugin.current.reset}
+                  >
+                    <CarouselContent className="h-full">
+                      {heroImages.map((image, index) => (
+                        <CarouselItem key={index} className="h-[450px] lg:h-[550px]">
+                          <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            className="w-full h-full object-cover"
+                          />
+                          {/* Subtle overlay for depth */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                  </Carousel>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-500">
+                  <Link
+                    to="/contact"
+                    className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary via-accent to-primary text-white font-bold rounded-xl shadow-2xl hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="relative">Request Testing Services</span>
+                    <ArrowRight className="relative ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  </Link>
+                  <Link
+                    to="/services"
+                    className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold rounded-xl border-2 border-transparent hover:from-white hover:to-gray-50 hover:text-gray-900 hover:border-gray-300 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    Learn About Services
+                  </Link>
+                </div>
               </div>
 
             </div>
 
-            {/* CTA Buttons - Centered Below */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 animate-fade-in delay-500">
-              <Link
-                to="/contact"
-                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary via-accent to-primary text-white font-bold rounded-xl shadow-2xl hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative">Request Testing Services</span>
-                <ArrowRight className="relative ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
-              <Link
-                to="/services"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold rounded-xl border-2 border-transparent hover:from-white hover:to-gray-50 hover:text-gray-900 hover:border-gray-300 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Learn About Services
-              </Link>
-            </div>
           </div>
 
           {/* Animated gradient overlay */}
