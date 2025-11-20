@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
-            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12 items-center">
+            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12 items-start">
               
               {/* LEFT: Content Column */}
               <div className="relative z-10 text-center lg:text-left animate-fade-in">
@@ -75,27 +75,10 @@ const HomePage: React.FC = () => {
                   ))}
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-500">
-                  <Link
-                    to="/contact"
-                    className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary via-accent to-primary text-white font-bold rounded-xl shadow-2xl hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden"
-                  >
-                    <span className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    <span className="relative">Request Testing Services</span>
-                    <ArrowRight className="relative ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                  </Link>
-                  <Link
-                    to="/services"
-                    className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold rounded-xl border-2 border-transparent hover:from-white hover:to-gray-50 hover:text-gray-900 hover:border-gray-300 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  >
-                    Learn About Services
-                  </Link>
-                </div>
               </div>
 
               {/* RIGHT: Photo Column - Carousel */}
-              <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in delay-300">
+              <div className="relative h-[600px] lg:h-[850px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in delay-300">
                 <Carousel
                   plugins={[plugin.current]}
                   className="w-full h-full"
@@ -104,7 +87,7 @@ const HomePage: React.FC = () => {
                 >
                   <CarouselContent className="h-full">
                     {heroImages.map((image, index) => (
-                      <CarouselItem key={index} className="h-[400px] lg:h-[600px]">
+                      <CarouselItem key={index} className="h-[600px] lg:h-[850px]">
                         <img 
                           src={image.src} 
                           alt={image.alt}
@@ -120,6 +103,24 @@ const HomePage: React.FC = () => {
                 </Carousel>
               </div>
 
+            </div>
+
+            {/* CTA Buttons - Centered Below */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 animate-fade-in delay-500">
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary via-accent to-primary text-white font-bold rounded-xl shadow-2xl hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="relative">Request Testing Services</span>
+                <ArrowRight className="relative ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+              </Link>
+              <Link
+                to="/services"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold rounded-xl border-2 border-transparent hover:from-white hover:to-gray-50 hover:text-gray-900 hover:border-gray-300 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Learn About Services
+              </Link>
             </div>
           </div>
 
