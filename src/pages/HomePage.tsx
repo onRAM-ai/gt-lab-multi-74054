@@ -15,6 +15,7 @@ import gtLabLogo from '../assets/GT_Lab_Logo_big.png';
 import labFacility from '../assets/lab-facility.jpg';
 import labInterior from '../assets/lab-interior.jpg';
 import labEquipment from '../assets/lab-equipment.jpg';
+import heroCarousel4 from '../assets/hero-carousel-4.jpg';
 const HomePage: React.FC = () => {
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
   const plugin = useRef(
@@ -28,7 +29,8 @@ const HomePage: React.FC = () => {
   const heroImages = [
     { src: labFacility, alt: "Goldfields Testing Laboratory Facility" },
     { src: labInterior, alt: "Laboratory Interior and Testing Equipment" },
-    { src: labEquipment, alt: "Advanced Laboratory Testing Equipment" }
+    { src: labEquipment, alt: "Advanced Laboratory Testing Equipment" },
+    { src: heroCarousel4, alt: "Stacked cylindrical concrete core specimens for laboratory testing" }
   ];
   return <div className="min-h-screen">
       <Header />
