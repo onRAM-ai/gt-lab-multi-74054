@@ -15,21 +15,6 @@ const WhyChooseUsPreview: React.FC = () => {
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 gap-8 mb-16">
-          {[{
-          number: "30+",
-          label: "Mining Focused"
-        }, {
-          icon: MapPin,
-          label: "Kalgoorlie Local"
-        }].map((stat, index) => <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-primary mb-2">
-                {stat.icon ? <stat.icon className="w-12 h-12 md:w-16 md:h-16 inline-block" /> : stat.number}
-              </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
-            </div>)}
-        </div>
 
         {/* Highlights Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
