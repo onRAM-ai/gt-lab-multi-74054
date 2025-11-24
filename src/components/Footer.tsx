@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Mail, Phone, Smartphone, MapPin, Linkedin } from 'lucide-react';
 import gtLabLogo from '../assets/GT_Lab_Logo_big.png';
 const Footer: React.FC = () => {
   const links = [{
@@ -39,8 +39,12 @@ const Footer: React.FC = () => {
                 <span className="text-sm text-primary/80">32 Vivian St, South Boulder, WA</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary" />
+                <Smartphone className="w-5 h-5 text-primary" />
                 <span className="text-sm text-primary/80">+61 428 466 070</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <span className="text-sm text-primary/80">08 9093 2431</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />

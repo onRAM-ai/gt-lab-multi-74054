@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, Smartphone, MapPin, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import Header from '../components/Header';
@@ -255,14 +255,28 @@ const ContactPage: React.FC = () => {
 
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Smartphone className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-1">
+                          Mobile
+                        </h3>
+                        <p className="text-gray-600">
+                          +61 428 466 070
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
                         <Phone className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">
-                          Phone
+                          Landline
                         </h3>
                         <p className="text-gray-600">
-                          +61 428 466 070
+                          08 9093 2431
                         </p>
                       </div>
                     </div>
