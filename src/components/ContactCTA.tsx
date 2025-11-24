@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Phone, Smartphone, Mail, MapPin } from 'lucide-react';
 const ContactCTA: React.FC = () => {
   return <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,10 +27,16 @@ const ContactCTA: React.FC = () => {
           {/* Quick Contact Options */}
           <div className="space-y-6">
             {[{
-            icon: Phone,
-            label: 'Call Us',
+            icon: Smartphone,
+            label: 'Call Mobile',
             value: '+61 428 466 070',
             action: 'tel:+61428466070',
+            type: 'tel'
+          }, {
+            icon: Phone,
+            label: 'Call Landline',
+            value: '08 9093 2431',
+            action: 'tel:0890932431',
             type: 'tel'
           }, {
             icon: Mail,
