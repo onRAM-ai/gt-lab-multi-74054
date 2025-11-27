@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
-import { supabase } from '@/integrations/supabase/client';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +15,6 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
     
     if (!formData.name || !formData.email || !formData.company || !formData.message) {
       toast.error('Please fill in all required fields.');
@@ -24,28 +22,28 @@ const Contact: React.FC = () => {
     }
     
     try {
-      const { data, error } = await supabase
-        .from('leads')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone || 'Not provided',
-            company: formData.company,
-            source: 'Goldfields Testing Laboratory Website',
-            status: 'New',
-            notes: `Samples: ${formData.sampleQuantity || 'Not specified'}, Timeline: ${formData.testingTimeline || 'Not specified'}`,
-            message: formData.message
-          }
-        ]);
+      const response = await fetch('/api/send-email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          company: formData.company,
+          message: formData.message,
+          sampleQuantity: formData.sampleQuantity || 'Not specified',
+          testingTimeline: formData.testingTimeline || 'Not specified'
+        })
+      });
 
-      if (error) {
-        console.error('Supabase error:', error);
-        toast.error('Error submitting form. Please try again.');
-        return;
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
       }
 
-      console.log('Lead saved to Supabase:', data);
       toast.success('Testing request sent successfully! We\'ll contact you within 24 hours.');
       setFormData({ 
         name: '', 

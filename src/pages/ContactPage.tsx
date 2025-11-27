@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Smartphone, MapPin, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
-import { supabase } from '@/integrations/supabase/client';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 const ContactPage: React.FC = () => {
@@ -99,18 +98,26 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
+      const response = await fetch('/api/send-email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           phone: formData.phone || 'Not provided',
           company: formData.company,
           message: formData.message,
           testingType: formData.testingType || 'Not specified'
-        }
+        })
       });
 
-      if (error) throw error;
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
+      }
 
       toast.success('Testing request sent successfully! We\'ll contact you within 24 hours.');
       setFormData({
