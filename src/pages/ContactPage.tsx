@@ -4,6 +4,7 @@ import { Mail, Phone, Smartphone, MapPin, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { supabase } from '@/lib/supabase';
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -98,36 +99,35 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/send-email.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      const { data, error } = await supabase.functions.invoke('send-email', {
+        body: {
           name: formData.name,
           email: formData.email,
           phone: formData.phone || 'Not provided',
           company: formData.company,
           message: formData.message,
           testingType: formData.testingType || 'Not specified'
-        })
+        }
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to send email');
+      if (error) {
+        console.error('Error sending email:', error);
+        throw error;
       }
 
-      toast.success('Testing request sent successfully! We\'ll contact you within 24 hours.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        testingType: ''
-      });
+      if (data?.success) {
+        toast.success('Testing request sent successfully! We\'ll contact you within 24 hours.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+          testingType: ''
+        });
+      } else {
+        throw new Error(data?.error || 'Failed to send email');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error('Error submitting form. Please try again.');
