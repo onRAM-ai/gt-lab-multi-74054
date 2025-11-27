@@ -4,7 +4,7 @@ import { Mail, Phone, Smartphone, MapPin, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '@/integrations/supabase/client';
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
