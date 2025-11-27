@@ -160,5 +160,5 @@ enabled = false
 client_id = ""
 secret = ""
 
-[functions.jotform-webhook]
+[functions.send-contact-email]
 verify_jwt = false
