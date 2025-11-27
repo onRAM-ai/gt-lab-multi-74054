@@ -212,16 +212,11 @@ const ContactPage: React.FC = () => {
                     </label>
                     <select name="testingType" value={formData.testingType} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors select-field">
                       <option value="">Select testing type</option>
-                      <option value="Compressive strength of grout cylinders (50mm diameter) AS1012.9 & 12.1">Compressive strength of grout cylinders (50mm diameter) AS1012.9 & 12.1</option>
-                      <option value="Compressive strength of grout/concrete cylinders (100mm diameter) AS1012.9 & 12.1">Compressive strength of grout/concrete cylinders (100mm diameter) AS1012.9 & 12.1</option>
-                      <option value="Compressive strength of grout/concrete cylinders (150mm diameter) AS1012.9 & 12.1">Compressive strength of grout/concrete cylinders (150mm diameter) AS1012.9 & 12.1</option>
-                      <option value="Compressive strength of CAF cylinders (150mm diameter)">Compressive strength of CAF cylinders (150mm diameter)</option>
-                      <option value="Compressive strength of grout cubes (50mm diameter) AS1012.9 & 12.1">Compressive strength of grout cubes (50mm diameter) AS1012.9 & 12.1</option>
-                      <option value="Compressive strength of grout/concrete cubes (100mm diameter) AS1012.9 & 12.1">Compressive strength of grout/concrete cubes (100mm diameter) AS1012.9 & 12.1</option>
-                      <option value="Compressive strength of grout/concrete cubes (150mm diameter) AS1012.9 & 12.1">Compressive strength of grout/concrete cubes (150mm diameter) AS1012.9 & 12.1</option>
-                      <option value="Shotcrete Panel Preparation (Coring & Polishing)">Shotcrete Panel Preparation (Coring & Polishing)</option>
-                      <option value="Compressive strength of shotcrete cores (81mm diameter) AS1012.14">Compressive strength of shotcrete cores (81mm diameter) AS1012.14</option>
-                      <option value="Energy absorption for Round Determinate Panel (ASTM C1550)">Energy absorption for Round Determinate Panel (ASTM C1550)</option>
+                      <option value="Concrete Cylinders or Cubes (AS 1012.9 & 1012.12.1)">Concrete Cylinders or Cubes (AS 1012.9 & 1012.12.1)</option>
+                      <option value="Shotcrete Cores (AS 1012.14)">Shotcrete Cores (AS 1012.14)</option>
+                      <option value="Cement Grout - For cable bolt applications">Cement Grout - For cable bolt applications</option>
+                      <option value="Backfill Testing - Paste or CAF cylinders">Backfill Testing - Paste or CAF cylinders</option>
+                      <option value="Round Determinate Panel (ASTM C1550)">Round Determinate Panel (ASTM C1550)</option>
                     </select>
                   </div>
 
