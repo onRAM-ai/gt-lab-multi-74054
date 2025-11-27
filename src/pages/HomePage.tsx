@@ -1,9 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { ArrowRight, Beaker, BarChart, Shield } from 'lucide-react';
+import React, { useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import QuoteForm from '../components/QuoteForm';
 import ServicesPreview from '../components/ServicesPreview';
 import WhyChooseUsPreview from '../components/WhyChooseUsPreview';
 import ClientsSection from '../components/ClientsSection';
@@ -17,14 +16,9 @@ import labInterior from '../assets/lab-interior.jpg';
 import labEquipment from '../assets/lab-equipment.jpg';
 import heroCarousel4 from '../assets/hero-carousel-4.jpg';
 const HomePage: React.FC = () => {
-  const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
   const plugin = useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
-  
-  const handleGetQuote = () => {
-    setIsQuoteFormOpen(true);
-  };
 
   const heroImages = [
     { src: labFacility, alt: "Goldfields Testing Laboratory Facility" },
@@ -149,9 +143,6 @@ const HomePage: React.FC = () => {
       </main>
 
       <Footer />
-
-      {/* Quote Form Modal */}
-      <QuoteForm isOpen={isQuoteFormOpen} onClose={() => setIsQuoteFormOpen(false)} />
     </div>;
 };
 export default HomePage;

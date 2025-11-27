@@ -86,33 +86,32 @@ const ContactPage: React.FC = () => {
       document.head.appendChild(meta);
     }
   }, []);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
     if (!formData.name || !formData.email || !formData.company || !formData.message) {
       toast.error('Please fill in all required fields.');
       return;
     }
+    
+    setIsSubmitting(true);
+
     try {
-      const {
-        data,
-        error
-      } = await supabase.from('leads').insert([{
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone || 'Not provided',
-        company: formData.company,
-        source: 'Goldfields Testing Laboratory Website - Contact Page',
-        status: 'New',
-        notes: `Testing Type: ${formData.testingType || 'Not specified'}`,
-        message: formData.message
-      }]);
-      if (error) {
-        console.error('Supabase error:', error);
-        toast.error('Error submitting form. Please try again.');
-        return;
-      }
-      console.log('Lead saved to Supabase:', data);
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          company: formData.company,
+          message: formData.message,
+          testingType: formData.testingType || 'Not specified'
+        }
+      });
+
+      if (error) throw error;
+
       toast.success('Testing request sent successfully! We\'ll contact you within 24 hours.');
       setFormData({
         name: '',
@@ -125,6 +124,8 @@ const ContactPage: React.FC = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error('Error submitting form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -224,8 +225,12 @@ const ContactPage: React.FC = () => {
                     <textarea name="message" value={formData.message} onChange={handleInputChange} rows={6} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none input-field" required placeholder="Please describe your project requirements, concrete specifications, and any special testing needs..."></textarea>
                   </div>
 
-                  <button type="submit" className="w-full bg-gradient-to-r from-primary to-accent text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center group">
-                    Send Testing Request
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-primary to-accent text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Testing Request'}
                     <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </form>

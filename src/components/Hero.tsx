@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { ArrowRight, Beaker, BarChart, Shield } from 'lucide-react';
-import QuoteForm from './QuoteForm';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import heroImage1 from '../assets/hero-carousel-1.jpg';
@@ -8,8 +7,6 @@ import heroImage2 from '../assets/hero-carousel-2.jpg';
 import heroImage3 from '../assets/hero-carousel-3.jpg';
 
 const Hero: React.FC = () => {
-  const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
-  
   // Create Autoplay plugin with useRef to persist across renders
   const autoplayPlugin = useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
@@ -141,12 +138,6 @@ const Hero: React.FC = () => {
 
       {/* Animated gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent pointer-events-none animate-gradient-xy"></div>
-
-      {/* Quote Form Modal */}
-      <QuoteForm 
-        isOpen={isQuoteFormOpen} 
-        onClose={() => setIsQuoteFormOpen(false)} 
-      />
     </section>
   );
 };
